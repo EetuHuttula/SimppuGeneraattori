@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const wordList = ['Simppu', 'Samppu', 'Limppu', 'Lamppu', 'Kamppu', 'Kimppu', 'Tumppu', 'Timppu', 'Himppu', 'Hamppu', 'Humppu', 'Hilppu', 'Mimppu',];
+    const [generatedSimppu, setGeneratedSimppu] = useState('');
+
+    const handleClick = () => {
+      const randomIndex = Math.floor(Math.random() * wordList.length);
+      setGeneratedSimppu(wordList[randomIndex]);
+      console.log("Help me I'm bored.")
+    };
+      return (
+        <div className="container">
+          <div>
+            <h2>SimppuGeneraattori</h2>
+            <p>Tämä on "hauska" pila kavereiden kesken..</p>
+            <p> {generatedSimppu} </p>
+            <button onClick={handleClick}>GeneroiSimppu</button>
+          </div>
+        </div>
+
+      );
 }
 
 export default App;

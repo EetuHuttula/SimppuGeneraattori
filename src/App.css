@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  height: 25em;
+  border-radius: 5px;
+}
+button {
+  margin-bottom: 5px;
+  height: 2em;
+  width: 10em;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 2em;
+}
+p {
+  height: 2em;
+  margin-top: 5em;
+}
